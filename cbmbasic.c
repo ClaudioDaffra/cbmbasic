@@ -24,8 +24,11 @@
  * SUCH DAMAGE.
  */
 
+#ifdef __GNUC__
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wunused-but-set-variable"
+#else
+#endif
 
 
 /* Provide Declarations */
@@ -28379,5 +28382,11 @@ llvm_cbe_lE455:
   } while (1); /* end of syntactic loop 'lE394' */
 }
 
+#ifdef __GNUC__
 #pragma GCC diagnostic pop
+#else
+//
+#endif
+
+
 

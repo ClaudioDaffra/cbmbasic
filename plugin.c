@@ -44,11 +44,15 @@
  * added functions.
  */
 
+#ifdef __GNUC__
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wunused-but-set-variable"
 
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wunused-variable"
+#else
+//	
+#endif
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -330,7 +334,9 @@ plugin_eval()
 	return 0;
 }
 
+#ifdef __GNUC__
 #pragma GCC diagnostic pop
 #pragma GCC diagnostic pop
-
-
+#else
+//
+#endif

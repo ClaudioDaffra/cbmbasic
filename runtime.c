@@ -24,8 +24,11 @@
  * SUCH DAMAGE.
  */
 
+#ifdef __GNUC__
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wunused-but-set-variable"
+#else
+#endif
 
 //#define NO_CLRHOME
 
@@ -925,6 +928,8 @@ kernal_dispatch() {
 	return 1;
 }
 
+#ifdef __GNUC__
 #pragma GCC diagnostic pop
-
-
+#else
+//
+#endif

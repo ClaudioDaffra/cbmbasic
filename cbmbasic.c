@@ -24,6 +24,10 @@
  * SUCH DAMAGE.
  */
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunused-but-set-variable"
+
+
 /* Provide Declarations */
 #include <stdarg.h>
 #include <setjmp.h>
@@ -28374,4 +28378,6 @@ llvm_cbe_lE455:
   } while (1); /* end of syntactic loop 'lE455' */
   } while (1); /* end of syntactic loop 'lE394' */
 }
+
+#pragma GCC diagnostic pop
 

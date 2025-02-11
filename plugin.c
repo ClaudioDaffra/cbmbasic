@@ -44,6 +44,12 @@
  * added functions.
  */
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunused-but-set-variable"
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunused-variable"
+
 #include <stdio.h>
 #include <stdlib.h>
 #ifdef _WIN32
@@ -299,7 +305,7 @@ plugin_gone() {
 			char s[256];
 
 			get_string(s);
-			system(s);
+			int xxx=system(s);
 
 			continue;
 		}
@@ -319,6 +325,12 @@ plugin_gone() {
  * New functions and operators go here.
  */
 unsigned short
-plugin_eval() {
+plugin_eval() 
+{
 	return 0;
 }
+
+#pragma GCC diagnostic pop
+#pragma GCC diagnostic pop
+
+
